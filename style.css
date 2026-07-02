@@ -375,7 +375,7 @@ section .title::after{
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    min-height: 180px;
+    height: 270px; /* Fixed height for all cards to prevent vertical jumping */
 }
 
 /* Card symbol wrapper */
@@ -435,6 +435,7 @@ section .title::after{
     padding: 25px 30px;
     gap: 25px;
     text-align: left;
+    height: 270px; /* Ensure height matches other cards to prevent vertical jumping */
 }
 
 /* Active card specific adaptations */
@@ -497,6 +498,7 @@ section .title::after{
         opacity: 0.8;
         transform: none;
         min-height: auto;
+        height: auto; /* Reset to auto height on mobile */
     }
     .timeline-card.active {
         width: 100%;
@@ -506,6 +508,7 @@ section .title::after{
         text-align: center;
         padding: 20px;
         transform: scale(1.02);
+        height: auto; /* Reset to auto height on mobile */
     }
     .timeline-card.active .card-content-expanded {
         text-align: center;
