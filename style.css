@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ubuntu:wght@400;500;700&display=swap');
-
 
 *{
     margin:0;
@@ -33,12 +31,13 @@ html{
     align-items:center;
     justify-content: space-around;
 }
+.navbar .logo{
+    white-space: nowrap;
+}
 .navbar .logo a{
     color:#ffff;
     font-size:35px;
     font-weight:600;
-
-
 }
 .navbar .logo a span{
     color:crimson;
@@ -106,14 +105,22 @@ html{
 /*home styling */
 .home{
     display:flex;
-    background:url("black.jpg") no-repeat center;
+    background-color: #050505;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(220, 20, 60, 0.08), transparent 75%), /* Soft crimson bedrock glow */
+        radial-gradient(ellipse at top left, rgba(60, 60, 60, 0.35), transparent 50%), /* Basalt gray highlights */
+        radial-gradient(ellipse at bottom right, rgba(30, 30, 30, 0.35), transparent 70%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E"); /* Crystalline bedrock noise texture */
+    background-blend-mode: normal, normal, normal, overlay;
     height:100vh;
     color:#ffff;
     min-height:500px;
     font-family:'ubuntu',sans-serif;
 }
 .home .max-width{
-    margin:auto 0 auto 40px;
+    width: 100%;
+    display: flex;
+    margin: auto;
 }
 .home .home-content .text-1{
     font-size:27px;
@@ -137,42 +144,23 @@ html{
     color:crimson;
     font-weight:500;
 }
-.home .home-content a{
-    display:inline-block;
-    background:crimson;
-    color:#fff;
-    font-size:25px;
-    padding:12px 36px;
-    margin-top:20px;
-    border-radius:6px;
-    border:2px solid crimson;
-    transition:all 0.3s ease;
 
-}
-.home .home-content a:hover{
-    color:crimson;
-    background:none;
-
-}
 /*section similar styling code*/
 section{
     padding :100px 0;
-
 }
 
-.about, .services, .skills, .teams, .contact, footer{
+.about, .journey, .skills, .projects, .contact, footer{
     font-family:'poppins',sans-serif;
-
 }
+
 .about .about-content,
-.services .serv-content,
 .skills .skills-content,
 .contact .contact-content{
     display:flex;
     flex-wrap:wrap;
     align-items:center;
     justify-content:space-between;
-
 }
 
 section .title{
@@ -195,7 +183,6 @@ section .title::before{
     transform: translateX(-50%);
 }
 section .title::after{
-    
     position:absolute;
     bottom:-12px;
     left:50%;
@@ -207,19 +194,12 @@ section .title::after{
 }
 
 /*about section css */
-
-
-
-
 .about .title::after{
     content:"who i am";
-
 }
-
 
 .about .about-content .left{
     width:45%;
-
 }
 .about .about-content .left img{
     height:500px;
@@ -256,7 +236,6 @@ section .title::after{
     border-radius:6px;
     border:2px solid crimson;
     transition:all 0.3s ease;
-
 }
 
 .about .about-content .right a:hover{
@@ -264,60 +243,273 @@ section .title::after{
     background:none;
 }
 
-
-/* services section styling*/
-
-.services, .teams{
+/* journey & projects sections background */
+.journey, .projects{
     color:#fff;
     background:#111;
 }
 
-.services .title::before,
-.teams .title::before{
+.journey .title::before,
+.projects .title::before{
     background:#fff;
 }
 
-.services .title::after,
-.teams .title::after{
+.journey .title::after{
     background:#111;
-    content:"what i provide"
-
+    content:"my pathway";
 }
 
-.services .serv-content .card{
-    width:calc(33% - 20px);
-    background:#222;
-    text-align:center;
-    border-radius:6px;
-    padding: 20px 25px;
-    cursor:pointer;
-    transition:all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background:crimson;
-}
-.services .serv-content .card .box{
-    transition:all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform:scale(1.05);
-
+.projects .title::after{
+    background:#111;
+    content:"what i built";
 }
 
-
-.services .serv-content .card i{
-    font-size:50px;
-    color:crimson;
-    transition: color 0.3s ease;
+/* Career Journey Timeline Styling */
+.horizontal-timeline {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
-.services .serv-content .card:hover i{
-    color:#fff;
+
+/* Time axis container */
+.timeline-axis {
+    position: relative;
+    width: 80%;
+    margin-bottom: 50px;
+    padding: 20px 0;
 }
 
-.services .serv-content .card .text{
-    font-size:25px;
-    font-weight:500;
-    margin:10px 0 7px 0;
+.timeline-line {
+    position: absolute;
+    height: 0;
+    border-top: 5px dashed crimson; /* Crimson dashed map trail line */
+    left: 2%;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.timeline-points {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.timeline-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.point-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #222;
+    border: 4px solid #333;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
+
+.point-date {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Active point states on the line */
+.timeline-point.active .point-dot {
+    border-color: crimson;
+    background: crimson;
+    box-shadow: 0 0 15px crimson;
+    transform: scale(1.2);
+}
+
+.timeline-point.active .point-date {
+    color: crimson;
+}
+
+.timeline-point:hover .point-dot {
+    border-color: crimson;
+    box-shadow: 0 0 10px crimson;
+}
+
+.timeline-point:hover .point-date {
+    color: #fff;
+}
+
+/* Timeline Cards Container */
+.timeline-cards {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Timeline Card */
+.timeline-card {
+    flex: 1;
+    background: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    opacity: 0.5;
+    transform: scale(0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    min-height: 180px;
+}
+
+/* Card symbol wrapper */
+.timeline-card .card-symbol-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.timeline-card .pixel-symbol {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    transition: all 0.5s ease;
+}
+
+.timeline-card .card-summary {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.timeline-card .card-summary h4 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.timeline-card .card-summary .summary-date {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Expanded contents (hidden by default) */
+.timeline-card .card-content-expanded {
+    max-height: 0;
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    text-align: left;
+}
+
+/* Active card state (grows big) */
+.timeline-card.active {
+    flex: 2.8; /* Expands significantly */
+    opacity: 1;
+    transform: scale(1.02);
+    border-color: crimson;
+    background: #262626;
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.25);
+    flex-direction: row; /* Switch to horizontal row on desktop */
+    align-items: center;
+    justify-content: flex-start;
+    padding: 25px 30px;
+    gap: 25px;
+    text-align: left;
+}
+
+/* Active card specific adaptations */
+.timeline-card.active .card-summary {
+    display: none;
+}
+
+.timeline-card.active .card-symbol-wrapper {
+    width: 85px;
+    height: 85px;
+    flex-shrink: 0;
+}
+
+.timeline-card.active .card-content-expanded {
+    max-height: 250px;
+    opacity: 1;
+    width: 100%;
+}
+
+.timeline-card .card-content-expanded .card-date {
+    font-size: 13px;
+    font-weight: 600;
+    color: crimson;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.timeline-card .card-content-expanded h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.timeline-card .card-content-expanded .card-subtitle {
+    font-size: 14px;
+    color: #aaa;
+    font-style: italic;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.timeline-card .card-content-expanded p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* Responsiveness for mobile screen layouts */
+@media (max-width: 768px) {
+    .timeline-axis {
+        width: 100%;
+    }
+    .timeline-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .timeline-card {
+        width: 100%;
+        opacity: 0.8;
+        transform: none;
+        min-height: auto;
+    }
+    .timeline-card.active {
+        width: 100%;
+        flex: 1;
+        flex-direction: column; /* Stack SVG above details on mobile */
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        transform: scale(1.02);
+    }
+    .timeline-card.active .card-content-expanded {
+        text-align: center;
+    }
 }
 
 /* skills section styling*/
@@ -349,8 +541,6 @@ section .title::after{
     border-radius:6px;
     border:2px solid crimson;
     transition:all 0.3s ease;
-
-
 }
 .skills .skills-content .left a:hover{
     color:crimson;
@@ -404,73 +594,113 @@ section .title::after{
     width:70%;
 }
 
-/* teams section styling*/
-.teams .title::after{
-    content:"who with me";
-
+/* projects section styling */
+.projects .title::after{
+    content:"what i built";
 }
-.teams .carousel .card{
-    background:#222;
-    border-radius:6px;
-    padding:25px 35px;
-    text-align:center;
-    transition:all 0.3s ease;
+.projects .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 10px;
 }
-.teams .carousel .card:hover{
-    background:crimson;
+.projects .projects-content .card {
+    width: calc(33% - 20px);
+    background: #222;
+    border-radius: 6px;
+    padding: 30px 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.teams .carousel .card .box{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    transition:all 0.3s ease;
+.projects .projects-content .card:hover {
+    background: crimson;
 }
-.teams .carousel .card:hover .box{
-    transform:scale(1.05);
+.projects .projects-content .card .box {
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
-.teams .carousel .card .text{
-    font-size:25px;
-    font-weight:500;
-    margin:10px 0 7px 0;
+.projects .projects-content .card:hover .box {
+    transform: scale(1.03);
 }
-.teams .carousel .card img{
-    height:150px;
-    width:150px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid crimson;
-    transition:all 0.3s ease;
+.projects .projects-content .card .project-icon {
+    font-size: 40px;
+    color: crimson;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
-.teams .carousel .card:hover img{
-    border-color:#fff;
+.projects .projects-content .card:hover .project-icon {
+    color: #fff;
 }
-.owl-dots{
-    text-align:center;
-    margin-top:20px;
+.projects .projects-content .card .text {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
-.owl-dot{
-    height:13px;
-    width:13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border:2px solid crimson!important;
-    transition:all 0.3s ease;
+.projects .projects-content .card p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ccc;
+    transition: color 0.3s ease;
 }
-.owl-dot.active{
-    width:35px;
-    border-radius:14px;
+.projects .projects-content .card:hover p {
+    color: #fff;
 }
-.owl-dot.active,
-.owl-dot:hover{
-    background:crimson!important;
+.projects .projects-content .card .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+.projects .projects-content .card .tech-stack span {
+    font-size: 12px;
+    background: #333;
+    padding: 4px 10px;
+    border-radius: 4px;
+    color: #eee;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.projects .projects-content .card:hover .tech-stack span {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.projects .projects-content .card .github-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background: crimson;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: auto;
+}
+.projects .projects-content .card:hover .github-link {
+    background: #fff;
+    color: crimson;
+    border-color: #fff;
 }
 
 /* contact section styling */
 .contact .title:after{
     content:"get in touch";
-
 }
 
 .contact .contact-content .column{
@@ -492,11 +722,9 @@ section .title::after{
     display:flex;
     height:65px;
     align-items:center;
-
 }
 .contact .contact-content .row .info{
     margin-left:30px;
-
 }
 .contact .contact-content .row i{
     font-size:25px;
@@ -510,7 +738,6 @@ section .title::after{
 }
 .contact .right form .fields{
     display:flex;
-
 }
 .contact .right form .field,
 .contact .right form .fields .field{
@@ -563,52 +790,38 @@ section .title::after{
     color:crimson;
     background:none;
 }
+
 /* footer styling*/
 footer{
     background:#111;
     padding:20px 23px;
     color:#fff;
-
 }
 footer span a{
     color:crimson;
     text-decoration:none;
-
 }
 footer span a:hover{
     text-decoration:underline;
-    
 }
 
-
-
-
-
-
-
-
 /* responsive media query start here */
-@media(max-width:1300px){
-    .home .max-width{
-        margin-left:0px;
+@media(max-width:1200px){
+    .navbar .max-width{
+        padding: 0 40px;
     }
-
+    .navbar .menu li a{
+        font-size: 16px;
+        margin-left: 20px;
+    }
 }
 @media(max-width:1104px){
     .about .about-content .left img{
         height:350px;
         width:350px;
-       
-    }
-
-}
-@media(max-width:991px){
-    .max-width{ 
-        padding:0 50px; 
     }
 }
-@media(max-width:947px){
-    
+@media(max-width:1024px){
     .menu-btn{
         display:block;
         z-index:999;
@@ -616,7 +829,6 @@ footer span a:hover{
     .menu-btn i.active:before{
         content:"\f00d";
     }
-
     .navbar .menu{
         position:fixed;
         height:100vh;
@@ -639,22 +851,15 @@ footer span a:hover{
         margin:20px 0;
         font-size:25px;
     }
-
     .home .home-content .text-2{
         font-size:70px;
-    
     }
-    
     .home .home-content .text-3{
         font-size:35px;
-    
     }
     .home .home-content a{
         font-size:23px;
         padding:10px 30px;
-    }
-    .max-width{
-        max-width:800px;
     }
     .about .about-content .column{
         width:100%;
@@ -667,7 +872,7 @@ footer span a:hover{
     .about .about-content .right{
         flex:100%;
     }
-    .services .serv-content .card{
+    .projects .projects-content .card{
         width:calc(50% - 10px);
         margin-bottom:20px;
     }
@@ -676,52 +881,284 @@ footer span a:hover{
         width:100%;
         margin-bottom:35px;
     }
-    
-
 }
-
-
-
+@media(max-width:991px){
+    .max-width{ 
+        padding:0 50px; 
+    }
+}
 @media(max-width:690px){
     .max-width{
         padding:0 23px;
     }
     .home .home-content .text-2{
-        font-size:60px;
-    
-    }
-    
-    .home .home-content .text-3{
-        font-size:32px;
-    
-    }
-
-    .home .home-content a{
-        font-size:20px;
-        
-    }
-
-    .services .serv-content .card,
-    .skills .skills-content .column{
-        width:100%;
-       
-        
-    }
-
-
-
-}
-
-@media(max-width:690px){
-    .home .home-content .text-2{
         font-size:50px;
-    
     }
-    
     .home .home-content .text-3{
         font-size:27px;
-    
     }
+    .home .home-content a{
+        font-size:20px;
+    }
+    .projects .projects-content .card,
+    .skills .skills-content .column{
+        width:100%;
+    }
+}
+@media(max-width:500px){
+    .home .home-content .text-2{
+        font-size:38px;
+    }
+    .home .home-content .text-3{
+        font-size:22px;
+    }
+    .home .home-content .text-1{
+        font-size:18px;
+    }
+    .home .home-content a{
+        font-size:18px;
+        padding:8px 24px;
+    }
+}
 
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
 
+.modal-content {
+    background-color: #1b1b1b;
+    margin: 5% auto; /* 5% from the top and centered */
+    padding: 20px;
+    border: 1px solid #333;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(220, 20, 60, 0.2); /* crimson glow */
+    color: #fff;
+    position: relative;
+    animation: modalopen 0.4s ease;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    color: crimson;
+}
+
+.modal-header .close-btn {
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-header .close-btn:hover {
+    color: crimson;
+}
+
+.modal-body {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Custom scrollbar for modal body */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-body::-webkit-scrollbar-track {
+    background: #111;
+}
+.modal-body::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+
+/* Resume Preview Styles inside Modal */
+.resume-preview {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid crimson;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.resume-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.resume-header p {
+    color: crimson;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.resume-contact {
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h3 {
+    font-size: 18px;
+    color: crimson;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resume-item {
+    margin-bottom: 15px;
+}
+
+.resume-item .item-title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+
+.resume-item .item-details {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.resume-item p {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 2px solid #333;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.modal-footer .download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: crimson;
+    color: #fff;
+    border: 2px solid crimson;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .download-btn:hover {
+    background: none;
+    color: crimson;
+}
+
+/* Modal Responsive Adaptation */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+    .resume-preview {
+        padding: 15px;
+    }
+    .resume-header h1 {
+        font-size: 22px;
+    }
+}
+
+/* Animated Pixel Fox */
+.hello-wrap {
+    position: relative;
+    display: inline-block;
+    padding-left: 52px;      /* Reserves space for the fox on the left */
+}
+
+.pixel-fox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 45px;             /* Fox size scaled for visibility */
+    height: 45px;
+    z-index: 10;
+    pointer-events: none;    /* Prevent SVG from blocking cursor interactions */
+    animation: fox-bob 2.5s ease-in-out infinite alternate; /* Gentle breathing animation */
+}
+
+@keyframes fox-bob {
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(calc(-50% - 2px)); /* Gentle bob up */
+    }
+}
+
+.fox-tail {
+    transform-origin: 75% 78%; /* Base attachment point on the body */
+    animation: tail-wag 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes tail-wag {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-25deg); /* Wave tail up and left */
+    }
 }

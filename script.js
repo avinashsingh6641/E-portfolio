@@ -41,30 +41,47 @@ $(document).ready(function(){
 
 
     });
+    // Resume Modal Logic
+    var modal = $('#resume-modal');
+    var btn = $('#view-resume-btn');
+    var closeSpan = $('.close-btn');
 
+    btn.click(function(e){
+        e.preventDefault();
+        modal.fadeIn(300);
+        $('body').css('overflow', 'hidden');
+    });
 
+    closeSpan.click(function(){
+        modal.fadeOut(300);
+        $('body').css('overflow', 'auto');
+    });
 
-    // owl carousel script
-    $('.carousel').owlCarousel({
-        margin:20,
-        loop:true,
-        autoplayTimeOut:2000,
-        autoplayHoverPause:true,
-        responsive:{
-            0:{
-                items:1,
-                nav:false
-            },
-            600:{
-                items:2,
-                nav:false
-            },
-            1000:{
-                items:3,
-                nav:false
-            }
+    $(window).click(function(event) {
+        if ($(event.target).is(modal)) {
+            modal.fadeOut(300);
+            $('body').css('overflow', 'auto');
         }
+    });
 
+    // Horizontal Timeline Interactivity
+    $('.timeline-point').click(function(){
+        var target = $(this).attr('data-target');
+        
+        $('.timeline-point').removeClass('active');
+        $(this).addClass('active');
+        
+        $('.timeline-card').removeClass('active');
+        $('#' + target).addClass('active');
+    });
 
+    $('.timeline-card').click(function(){
+        var target = $(this).attr('id');
+        
+        $('.timeline-card').removeClass('active');
+        $(this).addClass('active');
+        
+        $('.timeline-point').removeClass('active');
+        $('.timeline-point[data-target="' + target + '"]').addClass('active');
     });
 });

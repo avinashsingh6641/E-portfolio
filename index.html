@@ -1,283 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio website</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-  </head>
-  <body>
-    <div class="scroll-up-btn">
-      <i class="fas fa-angle-up"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+</head>
+
+<body>
+  <div class="scroll-up-btn">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  <nav class="navbar">
+    <div class="max-width">
+      <div class="logo">
+        <a href="#">Portfo<span>lio.</span></a>
+      </div>
+      <ul class="menu">
+        <li><a href="#home" class="menu-btn">Home</a></li>
+        <li><a href="#about" class="menu-btn">About</a></li>
+        <li><a href="#journey" class="menu-btn">Journey</a></li>
+        <li><a href="#skills" class="menu-btn">Skills</a></li>
+        <li><a href="#projects" class="menu-btn">Projects</a></li>
+        <li><a href="#contact" class="menu-btn">Contacts</a></li>
+      </ul>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </div>
-    <nav class="navbar">
-      <div class="max-width">
-        <div class="logo">
-          <a href="#">Portfo<span>lio.</span></a>
+  </nav>
+  <!--home section start here-->
+  <section class="home" id="home">
+    <div class="max-width">
+      <div class="home-content">
+        <div class="text-1">
+          <span class="hello-wrap">
+            <svg class="pixel-fox" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ear Left -->
+              <rect x="12" y="4" width="4" height="4" fill="#ff69b4" />
+              <rect x="8" y="8" width="4" height="4" fill="#ff69b4" />
+              <rect x="12" y="8" width="4" height="4" fill="#d81b60" />
+              <rect x="16" y="8" width="4" height="4" fill="#ff69b4" />
+              <rect x="8" y="12" width="4" height="4" fill="#ff69b4" />
+              <rect x="12" y="12" width="4" height="4" fill="#d81b60" />
+              <rect x="16" y="12" width="4" height="4" fill="#ff69b4" />
+
+              <!-- Ear Right -->
+              <rect x="44" y="4" width="4" height="4" fill="#ff69b4" />
+              <rect x="40" y="8" width="4" height="4" fill="#ff69b4" />
+              <rect x="44" y="8" width="4" height="4" fill="#d81b60" />
+              <rect x="48" y="8" width="4" height="4" fill="#ff69b4" />
+              <rect x="40" y="12" width="4" height="4" fill="#ff69b4" />
+              <rect x="44" y="12" width="4" height="4" fill="#d81b60" />
+              <rect x="48" y="12" width="4" height="4" fill="#ff69b4" />
+
+              <!-- Head -->
+              <rect x="4" y="16" width="48" height="8" fill="#ff69b4" />
+              <rect x="0" y="24" width="8" height="4" fill="#ff69b4" />
+              <rect x="8" y="24" width="4" height="4" fill="#111111" /> <!-- Eye L -->
+              <rect x="12" y="24" width="32" height="4" fill="#ff69b4" />
+              <rect x="44" y="24" width="4" height="4" fill="#111111" /> <!-- Eye R -->
+              <rect x="48" y="24" width="8" height="4" fill="#ff69b4" />
+
+              <rect x="0" y="28" width="24" height="4" fill="#ff69b4" />
+              <rect x="24" y="28" width="8" height="4" fill="#111111" /> <!-- Nose -->
+              <rect x="32" y="28" width="24" height="4" fill="#ff69b4" />
+
+              <rect x="4" y="32" width="8" height="4" fill="#ffffff" /> <!-- Cheek L -->
+              <rect x="12" y="32" width="32" height="4" fill="#ff69b4" />
+              <rect x="44" y="32" width="8" height="4" fill="#ffffff" /> <!-- Cheek R -->
+
+              <rect x="8" y="36" width="40" height="4" fill="#ffffff" /> <!-- Muzzle -->
+
+              <!-- Body -->
+              <rect x="12" y="40" width="8" height="4" fill="#ff69b4" />
+              <rect x="20" y="40" width="16" height="4" fill="#ffffff" />
+              <rect x="36" y="40" width="8" height="4" fill="#ff69b4" />
+
+              <rect x="8" y="44" width="12" height="4" fill="#ff69b4" />
+              <rect x="20" y="44" width="16" height="4" fill="#ffffff" />
+              <rect x="36" y="44" width="12" height="4" fill="#ff69b4" />
+
+              <rect x="8" y="48" width="40" height="4" fill="#ff69b4" />
+
+              <!-- Legs / Paws -->
+              <rect x="8" y="52" width="8" height="4" fill="#ff69b4" />
+              <rect x="20" y="52" width="16" height="4" fill="#ff69b4" />
+              <rect x="36" y="52" width="8" height="4" fill="#ff69b4" />
+
+              <rect x="8" y="56" width="8" height="4" fill="#d81b60" />
+              <rect x="20" y="56" width="16" height="4" fill="#d81b60" />
+              <rect x="36" y="56" width="8" height="4" fill="#d81b60" />
+
+              <!-- Animated Tail -->
+              <g class="fox-tail">
+                <rect x="48" y="48" width="8" height="4" fill="#ff69b4" />
+                <rect x="44" y="52" width="12" height="4" fill="#ff69b4" />
+                <rect x="56" y="52" width="4" height="4" fill="#ffffff" />
+                <rect x="48" y="56" width="8" height="4" fill="#ff69b4" />
+                <rect x="56" y="56" width="8" height="4" fill="#ffffff" />
+                <rect x="52" y="60" width="4" height="4" fill="#ff69b4" />
+                <rect x="56" y="60" width="8" height="4" fill="#ffffff" />
+              </g>
+            </svg>Hello</span>, my name is
         </div>
-        <ul class="menu">
-          <li><a href="#home" class="menu-btn">Home</a></li>
-          <li><a href="#about" class="menu-btn">About</a></li>
-          <li><a href="#services" class="menu-btn">Services</a></li>
-          <li><a href="#skills" class="menu-btn">Skills</a></li>
-          <li><a href="#teams" class="menu-btn">Teams</a></li>
-          <li><a href="#contact" class="menu-btn">Contacts</a></li>
-        </ul>
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
+        <div class="text-2">Avinash singh</div>
+        <div class="text-3">And I'm a <span class="typing"></span></div>
+      </div>
+    </div>
+  </section>
+  <!--About section start here-->
+  <section class="about" id="about">
+    <div class="max-width">
+      <h2 class="title">About me</h2>
+      <div class="about-content">
+        <div class="column left">
+          <img src="myPic.jpg" alt="" />
+        </div>
+        <div class="column right">
+          <div class="text">
+            I'm avinash and im a <span class="typing-2"></span>
+          </div>
+          <p>
+            Im an IT engineer and i like creating stuffs
+            I am currently learning web developer exploring the domain with enthusiasm and love.
+            i love to know the working mechanics of the stuffs
+
+            Besides learning to code for development i love movies and crafts.
+            miniture crafts are my faviroute ones
+
+
+            enrolling in the latest IT courses out there on the Internet.
+          </p>
+          <a href="#" id="view-resume-btn">View Resume</a>
         </div>
       </div>
-    </nav>
-    <!--home section start here-->
-    <section class="home" id="home">
-      <div class="max-width">
-        <div class="home-content">
-          <div class="text-1">Hello, my name is</div>
-          <div class="text-2">Avinash singh</div>
-          <div class="text-3">And I'm a <span class="typing"></span></div>
-          <a href="#">Hire me</a>
-        </div>
-      </div>
-    </section>
-    <!--About section start here-->
-    <section class="about" id="about">
-      <div class="max-width">
-        <h2 class="title">About me</h2>
-        <div class="about-content">
-          <div class="column left">
-            <img src="myPic.jpg" alt="" />
-          </div>
-          <div class="column right">
-            <div class="text">
-              I'm avinash and im a <span class="typing-2"></span>
+    </div>
+  </section>
+  <!-- journey section start here -->
+  <section class="journey" id="journey">
+    <div class="max-width">
+      <h2 class="title">My journey</h2>
+      <div class="horizontal-timeline">
+        <!-- Time Axis Line -->
+        <div class="timeline-axis">
+          <div class="timeline-line"></div>
+          <!-- Major Event Points -->
+          <div class="timeline-points">
+            <div class="timeline-point" data-target="schooling">
+              <div class="point-dot"></div>
+              <span class="point-date">2016 - 2017</span>
             </div>
-            <p>
-              Im an IT engineer and i like creating stuffs
-              I am currently learning web developer exploring the domain with enthusiasm and love.
-              i love to know the working mechanics of the stuffs 
-
-              Besides learning to code for development i love movies and crafts.
-              miniture crafts are my faviroute ones 
-
-              
-              enrolling in the latest IT courses out there on the Internet.
-            </p>
-            <a href="#">Download CV</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--services section start here-->
-    <section class="services" id="services">
-      <div class="max-width">
-        <h2 class="title">My services</h2>
-        <div class="serv-content">
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-paint-brush"></i>
-              <div class="text">Web Design</div>
-              <p>
-                What differs a Ferrari from a Nano? Good design, which I'm familiar with.
-              </p>
+            <div class="timeline-point" data-target="college">
+              <div class="point-dot"></div>
+              <span class="point-date">2017 - 2019</span>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-chart-line"></i>
-              <div class="text">Statistics</div>
-              <p>
-                I have some background in mathematics and I've learned to tackle problems most efficiently.
-              </p>
+            <div class="timeline-point" data-target="graduation">
+              <div class="point-dot"></div>
+              <span class="point-date">2019 - 2023</span>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="box">
-              <i class="fas fa-code"></i>
-              <div class="text">Apps Design</div>
-              <p>
-                Im an intermidiatry in app design ,as i have  created my mini-projects on java and python
-              </p>
+            <div class="timeline-point active" data-target="job">
+              <div class="point-dot"></div>
+              <span class="point-date">2023 - Present</span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--skills section start here-->
-    <section class="skills" id="skills">
-      <div class="max-width">
-        <h2 class="title">My skills</h2>
-        <div class="skills-content">
-          <div class="column left">
-            <div class="text">My creative skills & experiences.</div>
-            <p>
-              i have quite good knowledge in java as in second year of my engineering i created a blood bank organization app
-              i have learn python and  created a pdf to audiobook project gui based with the functionality that user can select languages 
-              currently im learning a web development 
-              im acquinted with c,c++ languages and i also have the knowledge of mysql as i have used it in my first java project
-            </p>
-            <a href="#">Read more</a>
+
+        <!-- Expandable Detail Cards -->
+        <div class="timeline-cards">
+          <!-- 1. Schooling Card -->
+          <div class="timeline-card" id="schooling">
+            <div class="card-symbol-wrapper">
+              <svg class="pixel-symbol" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <!-- Roof -->
+                <rect x="7" y="2" width="2" height="1" fill="#dc143c" />
+                <rect x="6" y="3" width="4" height="1" fill="#dc143c" />
+                <rect x="5" y="4" width="6" height="1" fill="#dc143c" />
+                <rect x="4" y="5" width="8" height="1" fill="#dc143c" />
+                <rect x="3" y="6" width="10" height="1" fill="#dc143c" />
+                <!-- Walls -->
+                <rect x="4" y="7" width="8" height="7" fill="#f4f4f4" />
+                <!-- Door -->
+                <rect x="7" y="10" width="2" height="4" fill="#6d4c41" />
+                <!-- Windows -->
+                <rect x="5" y="8" width="2" height="2" fill="#00b0ff" />
+                <rect x="9" y="8" width="2" height="2" fill="#00b0ff" />
+                <!-- Chimney -->
+                <rect x="10" y="3" width="2" height="3" fill="#333" />
+              </svg>
+            </div>
+            <div class="card-summary">
+              <h4>Schooling</h4>
+              <span class="summary-date">2016 - 2018</span>
+            </div>
+            <div class="card-content-expanded">
+              <span class="card-date">2016 - 2018</span>
+              <h3>Schooling</h3>
+              <span class="card-subtitle">10th</span>
+              <p>Went to ,</p>
+              <p>new Lord English School</p>
+              <p>Kalyan , Mumbai , Maharashtra</p>
+              <p>Aced with 80.20%.</p>
+            </div>
           </div>
-          <div class="column right">
-            <div class="bars">
+
+          <!-- 2. 12th Sci College Card -->
+          <div class="timeline-card" id="college">
+            <div class="card-symbol-wrapper">
+              <svg class="pixel-symbol" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <!-- Neck -->
+                <rect x="7" y="2" width="2" height="4" fill="#f4f4f4" />
+                <rect x="6" y="2" width="4" height="1" fill="#f4f4f4" />
+                <!-- Body -->
+                <rect x="6" y="6" width="4" height="1" fill="#f4f4f4" />
+                <rect x="5" y="7" width="6" height="1" fill="#f4f4f4" />
+                <rect x="4" y="8" width="8" height="1" fill="#f4f4f4" />
+                <rect x="3" y="9" width="10" height="5" fill="#f4f4f4" />
+                <!-- Liquid inside (crimson/pink) -->
+                <rect x="4" y="10" width="8" height="3" fill="#dc143c" />
+                <rect x="5" y="9" width="6" height="1" fill="#ff69b4" />
+                <!-- Bubbles -->
+                <rect x="8" y="7" width="1" height="1" fill="#ff69b4" />
+                <rect x="7" y="5" width="1" height="1" fill="#ff69b4" />
+              </svg>
+            </div>
+            <div class="card-summary">
+              <h4>12th Science</h4>
+              <span class="summary-date">2018 - 2020</span>
+            </div>
+            <div class="card-content-expanded">
+              <span class="card-date">2018 - 2020</span>
+              <h3>12th Science</h3>
+              <span class="card-subtitle">HSC Junior College</span>
+              <p>Completed higher secondary education in Science stream. Developed a deep fascination for physics,
+                mathematics, and took introductory computer science courses.</p>
+            </div>
+          </div>
+
+          <!-- 3. Graduation Card -->
+          <div class="timeline-card" id="graduation">
+            <div class="card-symbol-wrapper">
+              <svg class="pixel-symbol" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <!-- Diamond Cap -->
+                <rect x="7" y="3" width="2" height="1" fill="#333" />
+                <rect x="5" y="4" width="6" height="1" fill="#333" />
+                <rect x="3" y="5" width="10" height="1" fill="#333" />
+                <rect x="1" y="6" width="14" height="1" fill="#333" />
+                <rect x="3" y="7" width="10" height="1" fill="#333" />
+                <rect x="5" y="8" width="6" height="1" fill="#333" />
+                <rect x="7" y="9" width="2" height="1" fill="#333" />
+                <!-- Skull Cap base -->
+                <rect x="5" y="9" width="6" height="3" fill="#222" />
+                <rect x="4" y="9" width="1" height="2" fill="#222" />
+                <rect x="11" y="9" width="1" height="2" fill="#222" />
+                <!-- Tassel (crimson) -->
+                <rect x="8" y="5" width="1" height="1" fill="#dc143c" />
+                <rect x="9" y="6" width="1" height="3" fill="#dc143c" />
+                <rect x="10" y="8" width="2" height="2" fill="#dc143c" />
+              </svg>
+            </div>
+            <div class="card-summary">
+              <h4>Graduation</h4>
+              <span class="summary-date">2020 - 2024</span>
+            </div>
+            <div class="card-content-expanded">
+              <span class="card-date">2020 - 2024</span>
+              <h3>Graduation</h3>
+              <span class="card-subtitle">B.E. in Information Technology</span>
+              <p>Graduated with a Bachelor of Engineering in IT from University of Mumbai. Mastered algorithms, web
+                development, and databases. Built major systems, including a Java Blood Bank app and Python-based
+                converters.</p>
+            </div>
+          </div>
+
+          <!-- 4. Current Job Card -->
+          <div class="timeline-card active" id="job">
+            <div class="card-symbol-wrapper">
+              <svg class="pixel-symbol" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <!-- Screen frame -->
+                <rect x="2" y="3" width="12" height="8" fill="#444" />
+                <!-- Active screen (crimson glow/pink) -->
+                <rect x="3" y="4" width="10" height="6" fill="#111" />
+                <rect x="5" y="5" width="6" height="4" fill="#dc143c" />
+                <!-- Laptop base -->
+                <rect x="1" y="11" width="14" height="2" fill="#666" />
+                <rect x="6" y="11" width="4" height="1" fill="#333" /> <!-- Trackpad -->
+              </svg>
+            </div>
+            <div class="card-summary">
+              <h4>Current Job</h4>
+              <span class="summary-date">2024 - Present</span>
+            </div>
+            <div class="card-content-expanded">
+              <span class="card-date">2024 - Present</span>
+              <h3>Current Job</h3>
+              <span class="card-subtitle">Web Developer & IT Professional</span>
+              <p>Developing responsive front-ends, crafting custom user interfaces (such as RSA cryptosystem simulator),
+                and writing high-performance, responsive code across modern web frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--skills section start here-->
+  <section class="skills" id="skills">
+    <div class="max-width">
+      <h2 class="title">My skills</h2>
+      <div class="skills-content">
+        <div class="column left">
+          <div class="text">My creative skills & experiences.</div>
+          <p>
+            i have quite good knowledge in java as in second year of my engineering i created a blood bank organization
+            app
+            i have learn python and created a pdf to audiobook project gui based with the functionality that user can
+            select languages
+            currently im learning a web development
+            im acquinted with c,c++ languages and i also have the knowledge of mysql as i have used it in my first java
+            project
+          </p>
+          <a href="#">Read more</a>
+        </div>
+        <div class="column right">
+          <div class="bars">
+            <div class="info">
+              <span>HTML</span>
+              <span>90%</span>
+            </div>
+            <div class="line html"></div>
+          </div>
+
+          <div class="bars">
+            <div class="info">
+              <span>Css</span>
+              <span>70%</span>
+            </div>
+            <div class="line css"></div>
+          </div>
+
+          <div class="bars">
+            <div class="info">
+              <span>Javascript</span>
+              <span>60%</span>
+            </div>
+            <div class="line js"></div>
+          </div>
+
+          <div class="bars">
+            <div class="info">
+              <span>React</span>
+              <span>80%</span>
+            </div>
+            <div class="line php"></div>
+          </div>
+
+          <div class="bars">
+            <div class="info">
+              <span>MySQL</span>
+              <span>70%</span>
+            </div>
+            <div class="line mysql"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- projects section start here-->
+  <section class="projects" id="projects">
+    <div class="max-width">
+      <h2 class="title">My projects</h2>
+      <div class="projects-content">
+        <div class="card">
+          <div class="box">
+            <div class="project-icon">
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <div class="text">Blood Bank System</div>
+            <p>A comprehensive Java application built during engineering to manage blood inventory, donor profiles, and
+              requests efficiently.</p>
+            <div class="tech-stack">
+              <span>Java</span>
+              <span>MySQL</span>
+              <span>Swing</span>
+            </div>
+            <a href="https://github.com/avinashsingh6641/Blood-Bank-App" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="box">
+            <div class="project-icon">
+              <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="text">PDF to Audiobook Converter</div>
+            <p>A Python GUI-based application that parses PDF text and reads it aloud, featuring language selection
+              options for accessibility.</p>
+            <div class="tech-stack">
+              <span>Python</span>
+              <span>gTTS</span>
+              <span>PyQt5</span>
+            </div>
+            <a href="https://github.com/avinashsingh6641/PDF-to-Audiobook" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="box">
+            <div class="project-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="text">RSA Cryptosystem Simulator</div>
+            <p>An interactive RSA simulation interface allowing users to generate keys, encrypt messages, and witness
+              mathematical decryption processes.</p>
+            <div class="tech-stack">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <a href="https://github.com/avinashsingh6641/RSA-Simulator" target="_blank" class="github-link">
+              <i class="fab fa-github"></i> View on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact section start here-->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">Contact me</h2>
+      <div class="contact-content">
+        <div class="column left">
+          <div class="text">Get in Touch</div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, ipsam hic? Ipsum voluptatum quos nesciunt molestiae
+            in quibusdam quis quidem?
+          </p>
+          <div class="logo">
+            <div class="row">
+              <i class="fas fa-user"></i>
               <div class="info">
-                <span>HTML</span>
-                <span>90%</span>
+                <div class="head">Name</div>
+                <div class="sub-title">Avinash singh</div>
               </div>
-              <div class="line html"></div>
             </div>
 
-            <div class="bars">
+            <div class="row">
+              <i class="fas fa-map-marker-alt"></i>
               <div class="info">
-                <span>Css</span>
-                <span>70%</span>
+                <div class="head">Address</div>
+                <div class="sub-title">Kalyan,Mumbai</div>
               </div>
-              <div class="line css"></div>
             </div>
 
-            <div class="bars">
+            <div class="row">
+              <i class="fas fa-envelope"></i>
               <div class="info">
-                <span>Javascript</span>
-                <span>60%</span>
+                <div class="head">Email</div>
+                <div class="sub-title">singhavinash6641@gmail.com</div>
               </div>
-              <div class="line js"></div>
             </div>
 
-            <div class="bars">
-              <div class="info">
-                <span>React</span>
-                <span>80%</span>
-              </div>
-              <div class="line php"></div>
-            </div>
-
-            <div class="bars">
-              <div class="info">
-                <span>MySQL</span>
-                <span>70%</span>
-              </div>
-              <div class="line mysql"></div>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- teams section start here-->
-    <section class="teams" id="teams">
-      <div class="max-width">
-        <h2 class="title">My teams</h2>
-        <div class="carousel owl-carousel">
-          <div class="card">
-            <div class="box">
-              <img src="pic1b.jpg" alt="" />
-              <div class="text">Mihir Bist</div>
-              <p>Engineer, developer, artist , movie enthusiast</p>
-            </div>
-          </div>
+        <div class="column right">
+          <div class="text">Message me</div>
+          <form action="#">
+            <div class="fields">
+              <div class="field name">
+                <input type="text" placeholder="Name" required>
+              </div>
+              <div class="field email">
+                <input type="email" placeholder="Email" required>
+              </div>
 
-          <div class="card">
-            <div class="box">
-              <img src="pic2a.jpg" alt="" />
-              <div class="text">Yash Kadulkar</div>
-              <p>Engineer , developer, mentor </p>
             </div>
-          </div>
-
-          <div class="card">
-            <div class="box">
-              <img src="pic3a.jpg" alt="" />
-              <div class="text">Swapnil Mane</div>
-              <p>engineer, developer ,writer </p>
+            <div class="field">
+              <input type="text" placeholder="Subject" required>
             </div>
-          </div>
+            <div class="field textarea">
+              <textarea id="" cols="30" rows="10" placeholder="Describe project.." required></textarea>
 
+
+            </div>
+            <div class="button">
+              <button type="submit">Send message</button>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <!--footer section start here-->
+  <footer>
+    <span>Created By<a href="#"><span> New Learner</span></a> | <span class="far fa-copyright">2021 All rights
+        reserved.</span>
+  </footer>
 
-    <!-- contact section start here-->
-    <section class="contact" id="contact">
-      <div class="max-width">
-        <h2 class="title">Contact me</h2>
-        <div class="contact-content">
-          <div class="column left">
-            <div class="text">Get in Touch</div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, ipsam hic? Ipsum voluptatum quos nesciunt molestiae
-              in quibusdam quis quidem?
-            </p>
-            <div class="logo">
-              <div class="row">
-                <i class="fas fa-user"></i>
-                <div class="info">
-                  <div class="head">Name</div>
-                  <div class="sub-title">Avinash singh</div>
-                </div>
-              </div>
 
-              <div class="row">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="info">
-                  <div class="head">Address</div>
-                  <div class="sub-title">Kalyan,Mumbai</div>
-                </div>
-              </div>
-
-              <div class="row">
-                <i class="fas fa-envelope"></i>
-                <div class="info">
-                  <div class="head">Email</div>
-                  <div class="sub-title">singhavinash6641@gmail.com</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div class="column right">
-            <div class="text">Message me</div>
-            <form action="#">
-              <div class="fields">
-                <div class="field name">
-                  <input type="text" placeholder="Name" required>
-                </div>
-                <div class="field email">
-                  <input type="email" placeholder="Email" required>
-                </div>
-                
-              </div>
-              <div class="field">
-                <input type="text" placeholder="Subject" required>
-              </div>
-              <div class="field textarea">
-                <textarea id="" cols="30"rows="10" placeholder="Describe project.." required ></textarea>
-  
-
-              </div>
-              <div class="button">
-                <button type="submit">Send message</button>
-              </div>
-            </form>
-          </div>
-        </div>
+  <!-- Resume Modal -->
+  <div id="resume-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Resume Preview</h2>
+        <span class="close-btn">&times;</span>
       </div>
-    </section>
-    <!--footer section start here-->
-    <footer>
-      <span>Created By<a href="#" ><span> New Learner</span></a> | <span class="far fa-copyright">2021 All rights reserved.</span>
-    </footer>
+      <div class="modal-body" style="max-height: none; overflow: hidden; padding: 0;">
+        <iframe src="CV.pdf" width="100%" height="550px"
+          style="border: none; display: block; border-radius: 4px;"></iframe>
+      </div>
+      <div class="modal-footer">
+        <a href="CV.pdf" download="Avinash_Singh_Resume.pdf" class="download-btn">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </div>
 
+  <script src="script.js"></script>
+</body>
 
-    <script src="script.js"></script>
-  </body>
 </html>
